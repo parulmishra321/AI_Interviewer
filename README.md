@@ -1,5 +1,8 @@
 # AI Interviewer 
 
+[![Streamlit App](https://img.shields.io/badge/Live%20Demo-Streamlit-orange?logo=streamlit)](https://aiinterviewer-njfj9umabcwfy5jbudpqpx.streamlit.app/)
+
+
 ## Overview
 This project was built as part of my assignment.
 It is a simple AI-based interviewer that:
