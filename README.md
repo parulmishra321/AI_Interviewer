@@ -51,7 +51,7 @@ README.md              -> Documentation
 
 ## Architecture Diagram
 
-![Architecture Diagram](https://raw.githubusercontent.com/parulmishra321/AI_Interviewer/main/assets/architecture.png)
+![Architecture Diagram](https://raw.githubusercontent.com/parulmishra321/AI_Interviewer/main/Architecture Diagram - AI Interviewer.png)
 
 
 ## How to Run the Project
