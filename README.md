@@ -51,40 +51,7 @@ README.md              -> Documentation
 
 ## Architecture Diagram
 
-                       ┌─────────────────────────────┐
-                       │        User Input           │
-                       │ (Job Description + Answers) │
-                       └─────────────┬───────────────┘
-                                     │
-                                     ▼
-                       ┌──────────────────────────┐
-                       │          app.py          │
-                       │    (Streamlit Frontend)  │
-                       └─────────────┬────────────┘
-                                     │
-      ┌──────────────────────────────┼───────────────────────────────┐
-      │                              │                               │
-      ▼                              ▼                               ▼
-┌──────────────────────┐    ┌──────────────────────┐      ┌──────────────────────┐
-│ question_generator   │    │   answer_evaluator   │      │  interview_results   │
-│    (FLAN-T5 Model)   │    │   (MiniLM Embedding) │      │   (Saved Q/A Score)  │
-└──────────┬───────────┘    └───────────┬──────────┘      └──────────────────────┘
-           │                             │
-           ▼                             ▼
- ┌──────────────────────┐    ┌──────────────────────┐
- │     Generated        │    │   Score + Evaluation │
- │     Questions        │    │      (0–10 Scale)    │
- └──────────┬───────────┘    └───────────┬──────────┘
-            │                             │
-            └───────────────┬─────────────┘
-                            │
-                            ▼
-                ┌─────────────────────────────┐
-                │     Streamlit Interface     │
-                │      (Display + Download)   │
-                └─────────────────────────────┘
-
-  
+![Architecture Diagram](https://raw.githubusercontent.com/parulmishra321/AI_Interviewer/main/assets/architecture.png)
 
 
 ## How to Run the Project
