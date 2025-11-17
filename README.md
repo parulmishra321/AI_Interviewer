@@ -51,11 +51,10 @@ README.md              -> Documentation
 
 ## Architecture Diagram
 
-
-                       ┌───────────────────────────┐
-                       │        User Input         │
-                       │(Job Description + Answers)│
-                       └─────────────┬─────────────┘
+                       ┌─────────────────────────────┐
+                       │        User Input           │
+                       │ (Job Description + Answers) │
+                       └─────────────┬───────────────┘
                                      │
                                      ▼
                        ┌──────────────────────────┐
@@ -66,24 +65,26 @@ README.md              -> Documentation
       ┌──────────────────────────────┼───────────────────────────────┐
       │                              │                               │
       ▼                              ▼                               ▼
-┌───────────────────┐       ┌─────────────────────┐        ┌────────────────────┐
-│ question_generator│       │   answer_evaluator  │        │  interview_results │
-│ (FLAN-T5 Model)   │       │  (MiniLM Embedding) │        │  (Saved Q/A Score) │
-└─────────┬─────────┘       └───────────┬─────────┘        └────────────────────┘
-          │                             │
-          ▼                             ▼
- ┌───────────────────┐        ┌─────────────────────┐
- │     Generated     │        │ Score + Evaluation  │
- │     Questions     │        │    (0–10 Scale)     │
- └─────────┬─────────┘        └───────────┬─────────┘
-           │                              │
-           └───────────────┬──────────────┘
-                           │                           
-                           ▼
-               ┌──────────────────────────┐
-               │    Streamlit Interface   │
-               │    (Display + Download)  │
-               └──────────────────────────┘
+┌──────────────────────┐    ┌──────────────────────┐      ┌──────────────────────┐
+│ question_generator   │    │   answer_evaluator   │      │  interview_results   │
+│    (FLAN-T5 Model)   │    │   (MiniLM Embedding) │      │   (Saved Q/A Score)  │
+└──────────┬───────────┘    └───────────┬──────────┘      └──────────────────────┘
+           │                             │
+           ▼                             ▼
+ ┌──────────────────────┐    ┌──────────────────────┐
+ │     Generated        │    │   Score + Evaluation │
+ │     Questions        │    │      (0–10 Scale)    │
+ └──────────┬───────────┘    └───────────┬──────────┘
+            │                             │
+            └───────────────┬─────────────┘
+                            │
+                            ▼
+                ┌─────────────────────────────┐
+                │     Streamlit Interface     │
+                │      (Display + Download)   │
+                └─────────────────────────────┘
+
+  
 
 
 ## How to Run the Project
@@ -152,5 +153,5 @@ For any major changes, please open an issue first to discuss what you want to mo
 
 
 ## Contact
-**Name:** Parul Mishra
+**Name:** Parul Mishra | 
 **Email:** parulmishra321@gmail.com
