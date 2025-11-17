@@ -1,0 +1,9 @@
+streamlit
+transformers
+sentence-transformers
+torch
+accelerate
+numpy
+regex
+requests
+tqdm
